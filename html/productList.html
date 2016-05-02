@@ -1,0 +1,24 @@
+<!-- SEARCH BAR -->
+
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search products..." ng-model='searchFilter'>
+</div>
+
+
+
+<table class="table">
+  <thead>
+    <th ng-click='sortBy("name")'>Name<span class="caret"></span></th>
+    <th ng-click='sortBy("desc")'>Description<span class="caret"></span></th>
+    <th ng-click='sortBy("price")'>Price<span class="caret"></span></th>
+    <th ng-click='sortBy("memo")'>Category<span class="caret"></span></th>
+  </thead>
+  <tbody>
+    <tr ng-repeat='product in products | filter:searchFilter | orderBy:sortOrder track by $index' ui-sref='detail({id: product.id})'>
+      <td>{{product.name}}</td>
+      <td>{{product.desc}}</td>
+      <td>{{product.price | currency : $}}</td>
+      <td>{{product.category}}</td>
+    </tr>
+  </tbody>
+</table>

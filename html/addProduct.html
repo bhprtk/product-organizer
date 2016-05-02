@@ -1,0 +1,22 @@
+<div class="col-md-3"></div>
+<form class="col-md-6" ng-submit='createProduct()'>
+      <h4>New Product</h4>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" ng-model="newProduct.name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Description" ng-model="newProduct.desc" required>
+      </div>
+      <div class="form-group">
+        <input type="number" step="0.01" class="form-control" ng-model="newProduct.price" placeholder="Price">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Category" ng-model="newProduct.category" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Image URL" ng-model="newProduct.image" required>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-default add-button">add</button>
+      </div>
+    </form>
